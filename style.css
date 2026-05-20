@@ -1,0 +1,164 @@
+/* Grid: 2 kolumny na mobile, 4 na >=768px */
+.zawiadomienie-osoby-wrapper {
+    margin: 20px 0;
+}
+
+.zawiadomienie-osoby-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+    .zawiadomienie-osoby-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .zawiadomienie-osoby-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.osoba-card {
+    display: flex;
+    gap: 15px;
+    align-items: stretch;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+        min-height: 140px;
+}
+
+.osoba-img {
+    width: 100px;
+    height: 100%;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.osoba-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.osoba-nazwisko {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.osoba-funkcja {
+    margin: 0px 0 10px;
+    color: #0e386e;
+    line-height: 15px;
+}
+
+.osoba-grupa {
+    font-size: 13px;
+    line-height: 1;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #f1f3f5;
+    color: #333;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.osoba-grupa:hover {
+    background: #e9ecef;
+}
+
+.osoba-kara {
+    margin-top: auto;
+    font-size: 14px;
+    color: #333;
+}
+
+
+/* STRONA DANEJ OSOBY */
+
+#osoba_box_dane {
+    text-align: center;
+}
+
+#osoba_box_dane img {
+    box-shadow: 2px 2px 5px silver;
+    margin-bottom: 15px;
+}
+
+#osoba_box_dane h1 {
+    font-size: 40px !important;
+    color: #041d43 !important;
+}
+
+#osoba_box_dane div.osoba-grupy{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    margin: 4px 0;
+}
+
+#osoba_box_dane span {
+    margin: 0 auto 20px;
+    display: inline-flex;
+    font-size: 22px;
+    color: #0e386e;
+}
+
+#box_osoba_zawiadomienia ul {
+  padding: 0;
+}
+
+#box_osoba_zawiadomienia ul li {
+  color: #666666;
+  font-size: 22px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  padding: 10px 20px 10px 20px;
+  list-style-type: decimal;
+}
+
+#box_osoba_zawiadomienia ul li h3 {
+    background: #F4F4F4;
+    border-left: 10px solid #001B44;
+    padding: 20px;
+    line-height: 1.3;
+}
+
+#box_osoba_zawiadomienia div.wyroznione-max-kara {
+    font-size: 15px;
+    color: #d24826;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+#box_osoba_zawiadomienia div.wyroznione-max-kara strong {
+    color: #044266;
+        font-weight: 600;
+}
+
+#box_osoba_zawiadomienia ul li a {
+  color: #044266;
+}
+
+#box_osoba_zawiadomienia ul li:hover a {
+  color: #e02b20;
+}
+
+/* MAX KARA SHORTCODE */
+span.max-kara-style {
+    color: #d24826; /* #66000c */
+    font-weight: 700;
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    font-size: 16px;
+}
